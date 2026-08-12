@@ -8,6 +8,7 @@ int main()
 {
     ifstream inFile("mydata.txt");
     string fileline;
+    int lineCount = 0;
 
     if (inFile.is_open())
     {
@@ -15,9 +16,9 @@ int main()
 
         while (getline(inFile, fileline))
         {
-            cout << fileline << endl;
+            lineCount++;
         }
-
+        cout << lineCount;
         inFile.close();
     } else
     {
